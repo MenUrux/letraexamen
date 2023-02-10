@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f12711;
+    background: -webkit-linear-gradient(to right, #97ABFF, #123597);
+    background: linear-gradient(to right, #97ABFF, #123597);
+    font-family: 'Oswald', sans-serif;
+    user-select: none;
+
+}
+
+/* Nav */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 16px;
+    margin-bottom: 24px;
+    box-shadow: 2px 2px 10px black;
+    backdrop-filter: blur(20px);
+
+}
+
+nav>h1 {
+    width: 15%;
+    font-weight: 700;
+}
+
+nav>ol {
+    display: flex;
+    gap: 12px;
+    list-style-type: none;
+}
+
+nav>ol>li>a {
+    background-color: #6582d3;
+    padding: 16px;
+    transition: all 250ms;
+    border-radius: 10px;
+}
+
+a,
+a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+nav>ol>li>a:hover {
+    background-color: #c2d2ff;
+    filter: drop-shadow(3px 3px 1px rgba(0, 0, 0, 0.4));
+}
+
+
+div.principal {
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 90%;
+    margin: auto;
+    margin-bottom: 5%;
+    height: max-content;
+    border: 2px solid black;
+    padding: 40px;
+    gap: 36px;
+}
+
+div.principal>h2{
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+div.principal>.tema>h3{
+    font-size: 24px;
+}
+
+div.principal>.tema{
+    padding: 20px;
+}
+
+img.imagen-tema{
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    filter: drop-shadow(10px 10px 2px rgba(0, 0, 0, 0.5));
+    
+}
+
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    nav>h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav>ol>li>a {
+        display: flex;
+        padding: 12px;
+    }
+
+    nav {
+        justify-content: stretch;
+    }
+
+    img.imagen-tema{
+        width: 100%;
+    }
+}
